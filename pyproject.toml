@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "music_player"
+version = "1.0.0"
+description = "음악 재생 및 언어 공부에 도움을 주는 App"
+readme = "README.md"
+authors = [
+    {name = "reinhardt0926", email = "reinhardt0926@gmail.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.6"
+dependencies = [
+    "pygame==2.6.1",
+]
+
+[project.scripts]
+pdf_merger = "src.main:main"
+
+[project.urls]
+"Homepage" = "https://github.com/reinhardt0926/music_player"
+"Bug Tracker" = "https://github.com/reinhardt0926/music_player/issues"
+
+[tool.setuptools]
+packages = ["src", "src.ui"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+music_player = ["resources/icons/*.ico"]
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 88
+target-version = ["py36", "py37", "py38", "py39"]
+
+[tool.mypy]
+python_version = "3.6"
+warn_return_any = true
+warn_unused_configs = true
