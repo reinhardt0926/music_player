@@ -2,6 +2,8 @@
 
 음악, 언어학습을 위해 도움을 주는 Music Player 입니다. 
 
+![Music Player screenshot](docs/images/music_player_image.JPG)
+
 ## 주요 기능
 
 - 음악, 영어 파일 재생
